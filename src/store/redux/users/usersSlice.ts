@@ -1,24 +1,23 @@
-import { PayloadAction } from "@reduxjs/toolkit";
-import { createAppSlice } from "../../createAppSlice";
-import { UserSliceState, UserData } from "./types";
+import { PayloadAction } from '@reduxjs/toolkit';
+import { createAppSlice } from '../../createAppSlice'
+import { UsersSliceState, UserData } from './types'
 
-const userInitialState: UserSliceState = {
-    users: []
+const usersInitialState: UsersSliceState = {
+  users: []
 }
 
-export const userSlice = createAppSlice({
+export const usersSlice = createAppSlice({
   name: 'USERS',
-  initialState: userInitialState,
+  initialState: usersInitialState,
   reducers: create => ({
-  addUser: create.reducer((state: UserSliceState, action:PayloadAction<UserData>) => {
-    state.users=[...state.users, action.payload]
-  })
-  
+    addUser: create.reducer((state: UsersSliceState, action:PayloadAction<UserData>) => { 
+      state.users=[...state.users, action.payload]
+    })
   }),
   selectors: {
-    users: (state: UserSliceState) => state.users
+    users: (state: UsersSliceState) => state.users
   }
 })
 
-export const userSliceActions = userSlice.actions;
-export const userSliceSelectors = userSlice.selectors;
+export const usersSliceActions = usersSlice.actions;
+export const usersSliceSelectors = usersSlice.selectors;

@@ -5,6 +5,6 @@ export interface UserData {
     jobTitle: string
   }
 
-export interface UserSliceState{ 
+export interface UsersSliceState{ 
     users: UserData[]
 }
