@@ -4,7 +4,7 @@ import { HomePageWrapper, UserForm, UserFormName } from "./styles"
 import { useFormik } from "formik"
 import { UserFormNames, USER_FORM_VALUES } from "./types"
 import { useAppDispatch } from "../../../store/hooks"
-import { userSliceActions } from "../../../store/redux/users/usersSlice"
+import { usersSliceActions } from "../../../store/redux/users/usersSlice"
 import { v4 } from 'uuid';
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
       [USER_FORM_VALUES.JOB_TITLE]: '',
     } as unknown as UserFormNames,
     onSubmit: (values) => {
-      dispatch(userSliceActions.addUser({...values, id: v4()}))
+      dispatch(usersSliceActions.addUser({...values, id: v4()}))
     }
   })
 

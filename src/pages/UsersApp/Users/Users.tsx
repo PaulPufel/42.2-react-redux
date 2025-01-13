@@ -1,10 +1,10 @@
 import { UsersPageWrapper, UserCard, Paragraph } from "./styles"
-import { userSliceSelectors } from "../../../store/redux/users/usersSlice"
+import { usersSliceSelectors } from "../../../store/redux/users/usersSlice"
 import { useAppSelector } from "../../../store/hooks"
 import { v4 } from "uuid";
 
 function Users() {
-  const userData = useAppSelector(userSliceSelectors.users);
+  const userData = useAppSelector(usersSliceSelectors.users);
   console.log(userData);
   
  const userCards = userData.map((user) => {
