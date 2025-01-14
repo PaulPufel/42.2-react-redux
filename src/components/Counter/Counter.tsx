@@ -4,12 +4,15 @@ import { CounterContainer, ButtonWrapper, CounterResult } from './styles';
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 //10. Импортируем экшены и селекторы, которые были созданы и экспортированы в файле со слайсом
 import { counterSliceActions, counterSliceSelectors } from "../../store/redux/counter/counterSlice";
+
 function Counter() {
   //11. Забираем значение count из store
   const count = useAppSelector(counterSliceSelectors.count)
   console.log(count);
+
   //12. Сохраняем функцию dispatch, которую возвращает хук useAppDispatch
   const dispatch = useAppDispatch();
+
   const onMinus = () => {
     //13. Диспатчить экшен (индентификатор действия), который вызовет соответствующий редьюсер
     dispatch(counterSliceActions.minus())
@@ -19,6 +22,7 @@ function Counter() {
     //13. Диспатчить экшен (индентификатор действия), который вызовет соответствующий редьюсер
     dispatch(counterSliceActions.plus())
   }
+
   return (
     <CounterContainer>
       <ButtonWrapper>
@@ -31,4 +35,5 @@ function Counter() {
     </CounterContainer>
   );
 }
+
 export default Counter;
