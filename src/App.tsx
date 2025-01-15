@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Provider } from "react-redux"
-import { store } from "./store"
+// import { Provider } from "react-redux"
+// import { store } from "./store"
 // import { BrowserRouter} from "react-router-dom"
 // import Layout from "./pages/UsersApp/Layout/Layout"
 // import Home from "./pages/UsersApp/Home/Home"
@@ -8,30 +8,36 @@ import { store } from "./store"
 
 //lessons
 // import Lesson16 from "./lessons/Lesson16/Lesson16"
+import Lesson17 from "./lessons/Lesson17/Lesson17"
+
 
 //homeworks
-import Homework16 from "./homeworks/Homework16/Homework16"
+// import Homework16 from "./homeworks/Homework16/Homework16"
+// import Homework16Cw from "./homeworks/Homework16Cw/Homework16Cw"
+
 
 //consultations
 // import Consultation08 from "./consultations/Consultation08/Consultation08"
 
 const App = () => {
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
     <BrowserRouter>
       {/* <Consultation08 /> */}
       {/* <Lesson16 /> */}
-      <Homework16 />
       {/* UserApp - Practice Lesson16 */}
       {/* <Layout>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/users' element={<Users/>}/>
-        <Route path='*' element='Page not found'/>
-      </Routes>
-    </Layout> */}
+       <Routes>
+         <Route path='/' element={<Home/>}/>
+         <Route path='/users' element={<Users/>}/>
+         <Route path='*' element='Page not found'/>
+       </Routes>
+      </Layout> */}
+      {/* <Homework16 /> */}
+      {/* <Homework16Cw />  */}
+      <Lesson17 /> 
     </BrowserRouter>
-    </Provider>
+    // </Provider>
   )
 }
 
