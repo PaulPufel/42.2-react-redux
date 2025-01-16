@@ -17,9 +17,10 @@ function FeedbackCw() {
   // console.log(feedbackData);
   const { likeCount, dislikeCount } = useAppSelector(feedbackSliceSelectors.feedbackData);
   const dispatch = useAppDispatch();
+  const plusLikes = 100;
 
   const addLike = () => {
-    dispatch(feedbackSliceActions.addLike())
+    dispatch(feedbackSliceActions.addLike(100))
   }
 
   const addDislike = () => {

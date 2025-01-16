@@ -1,3 +1,4 @@
+import { PayloadAction } from "@reduxjs/toolkit";
 import { createAppSlice } from "../../createAppSlice";
 import { FeedbackCwSliceState } from "./styles";
 
@@ -10,8 +11,8 @@ export const feedbackCwSlice = createAppSlice({
   name: 'FEEDBACK',
   initialState: feedbackInitialState,
   reducers: create => ({
-    addLike: create.reducer((state: FeedbackCwSliceState) => {
-      state.likeCount = state.likeCount + 1
+    addLike: create.reducer((state: FeedbackCwSliceState, action:PayloadAction<number>) => {
+      state.likeCount += action.payload
     }),
     addDislike: create.reducer((state: FeedbackCwSliceState) => {
       state.dislikeCount = state.dislikeCount + 1

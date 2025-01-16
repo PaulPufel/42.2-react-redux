@@ -1,16 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface FeedbackState {
-  likes: number;
-  dislikes: number;
-}
+import { FeedbackState } from './styles';
 
 const initialState: FeedbackState = {
   likes: 0,
   dislikes: 0,
 };
 
-const feedbackSlice = createSlice({
+export const feedbackSlice = createSlice({
   name: 'feedback',
   initialState,
   reducers: {
@@ -28,4 +24,3 @@ const feedbackSlice = createSlice({
 });
 
 export const { incrementLikes, incrementDislikes, resetFeedback } = feedbackSlice.actions;
-export default feedbackSlice.reducer;
