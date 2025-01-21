@@ -7,3 +7,8 @@ export const Lesson18Wrapper = styled.div`
  justify-content: center;
  flex: 1;
 `
+export const Title = styled.h1`
+margin: 50px;
+font-size: 70px;
+color: blueviolet;
+`

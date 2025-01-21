@@ -1,5 +1,5 @@
 export interface RandomJoke {
-  id: string
+  id: string,
   joke: string
 }
 

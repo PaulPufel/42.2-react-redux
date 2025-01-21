@@ -1,4 +1,4 @@
-import { useFormik } from 'formik'
+import { useFormik } from 'formik';
 import Input from '../Input/Input';
 import {  FeedbackFormContainer, Message } from "./styles";
 import Button from '../Button/Button';
@@ -47,4 +47,4 @@ function FeedbackForm () {
   )
 }
 
-export default FeedbackForm
+export default FeedbackForm;

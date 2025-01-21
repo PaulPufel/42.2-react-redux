@@ -3,7 +3,7 @@ import Spinner from "../Spinner/Spinner";
 import { JokeCard, JokesContainer, RandomJokesWrapper, JokeText, JokeWrapper } from "./styles";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { randomJokesSliceActions, randomJokesSliceSelectors } from "../../store/redux/randomJokes/randomJokesSlice";
-import { RandomJoke } from "../../store/redux/randomJokes/types"
+import { RandomJoke } from "../../store/redux/randomJokes/types";
 
 function RandomJokes() {
   const dispatch = useAppDispatch();
