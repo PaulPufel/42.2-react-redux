@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 //lessons
 // import Lesson16 from "./lessons/Lesson16/Lesson16"
-import Lesson17 from "./lessons/Lesson17/Lesson17"
+// import Lesson17 from "./lessons/Lesson17/Lesson17"
 // import Lesson18 from "./lessons/Lesson18/Lesson18"
 
 
@@ -20,6 +20,7 @@ import Lesson17 from "./lessons/Lesson17/Lesson17"
 //consultations
 // import Consultation08 from "./consultations/Consultation08/Consultation08"
 // import Consultation09 from "./consultation/Consultation09/Consultation09"
+import Consultation10 from "./consultation/Consultation10/Consultation10"
 
 const App = () => {
   return (
@@ -36,9 +37,10 @@ const App = () => {
       </Layout> */}
       {/* <Homework16 /> */}
       {/* <Homework16Cw />  */}
-      <Lesson17 />
+      {/* <Lesson17 /> */}
       {/* <Lesson18 /> */}
       {/* <Consultation09 /> */}
+      <Consultation10/>
       {/* <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -49,4 +51,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
