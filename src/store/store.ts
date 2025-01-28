@@ -8,12 +8,13 @@ import { feedbackCwSlice } from "./redux/feedbackCw/feedbackCwClice"
 import { feedbackSlice } from "./redux/feedback/feedbackSlice"
 import { customerSlice } from "./redux/customer/customerSlice"
 import { feedbackFormSlice } from "./redux/feedbackForm/feedbackFornSlice"
+import { authSlice } from "./redux/auth/auth.Slice"
 
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.
 //8. Передаём созданные слайсы в compineSlices
 const rootReducer = combineSlices(counterSlice, usersSlice, feedbackSlice, 
-  feedbackCwSlice, randomJokesSlice, customerSlice, feedbackFormSlice)
+  feedbackCwSlice, randomJokesSlice, customerSlice, feedbackFormSlice, authSlice)
 // Infer the `RootState` type from the root reducer
 export type RootState = ReturnType<typeof rootReducer>
 
